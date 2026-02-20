@@ -1,42 +1,35 @@
-# test
+# Стек
 
-This template should help get you started developing with Vue 3 in Vite.
+- **Vue.js 3 + Composition API** — фреймворк  
+- **TypeScript** — язык разработки  
+- **Pinia** — стейт-менеджер  
+- **Ant design** — UI-фреймворк
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+# Структура формы
 
-## Recommended Browser Setup
+Форма состоит из:
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Заголовка  
+- Кнопки добавления учетной записи (`+`)  
+- Подсказки для поля «Метка»  
+- Списка учетных записей с лейблами полей  
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+# Структура учетной записи
 
-## Customize configuration
+Каждая учетная запись содержит следующие поля:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### 1. Метка
+- Необязательное поле  
+- Максимум **50 символов**  
+- Ввод текстовых меток через символ `;`  
+- При сохранении преобразуется в массив объектов вида:
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+```ts
+[
+  { text: "метка1" },
+  { text: "метка2" }
+]
