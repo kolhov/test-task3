@@ -1,6 +1,6 @@
 ## Демо
 
-kolhov.github.io/test-task3/
+[kolhov.github.io/test-task3/](https://kolhov.github.io/test-task3/)
 
 ## Стек
 
